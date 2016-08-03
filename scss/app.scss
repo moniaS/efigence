@@ -48,7 +48,11 @@
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
-
-.login-wrapper {
-	background-color: #aaaaaa;
-}
+@import "colors.scss"
+@import "variables.scss"
+@import "fonts.scss"
+@import "pages/login.scss
+@import "components/avatars.scss"
+@import "components/buttons.scss"
+@import "components/icons.scss"
+@import "components/form-elements.scss"
