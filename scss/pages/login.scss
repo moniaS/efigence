@@ -1,26 +1,20 @@
 .login-wrapper {
+	padding-top: 50px;
+	padding-bottom: 50px;
 	border: 1px black solid;
-	background-color: #aaaaaa;
+	background-color: #555555;
+}
+.login-form {
+	background-color: #00BFFF;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-bottom: 30px;
 }
 
-.login-form {
-	margin-top:25px;
-	margin-bottom:25px;
-	text-align:center;
-	border: 1px black solid;
-}
 .footer {
 	clear: both;
 	position: relative;
 	z-index: 10;
 	height: 3em;
 	margin-top: -3em;
-}
-p {
-	margin-top:50px;
-	margin-bottom:20px;
-}
-button {
-	margin-left: 20px;
-	margin-right: 20px;
 }
