@@ -1,6 +1,37 @@
 button {
-	margin-left: 20px;
-	margin-right: 20px;
-	padding: 10px;
+	margin: auto 20px;
+	padding: 5px;
 	border: 1px white solid;
+	border-radius: 0.2em;
+}
+.clear-button {
+	background: url("..\\scss\\images\\clear-icon.png") no-repeat;
+	background-color: $clear-btn-color;
+	background-position: center;
+	border: none;
+	border-radius: 5px;
+	padding: 0px;
+	margin: 5px;
+	width: 15px;
+	height: 15px;
+}
+.go-btn {
+	background-color: $white-color;
+	border: none;
+	padding: 4px 45px;
+	margin: auto 0px;
+}
+.select-other-btn {
+	background: none;
+	border: none;
+	padding: auto 0px;
+	margin-left: 0px;
+}
+.keyboard-btn {
+	background: url("..\\scss\\images\\keyboard.png") no-repeat;
+	background-position: center;
+	padding: 0px;
+	margin: 5px;
+	width: 20px;
+	height: 10px;
 }

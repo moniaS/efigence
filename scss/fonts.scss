@@ -1,5 +1,26 @@
-.login-wrapper, h1, h4{
-	text-align: center;
-	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	color: #ffffff;
+footer {
+	font-size: $footer-font-size;
+	margin-top: 20px;
+	text-align: left;
 }
+
+.login-wrapper, h1, subtitle, footer > a{
+	text-align: center;
+	font-family: 'Roboto Condensed', sans-serif;
+	color: $white-color;
+}
+
+.subtitle {
+	font-size: $subtitle-font-size;
+}
+
+.go-btn {
+	color: $black-color;
+	font-size: $button-font-size;
+}
+
+.select-other-btn {
+	color: $white-color;
+	font-size: $button-font-size;
+}
+
