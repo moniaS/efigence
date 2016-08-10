@@ -4,5 +4,10 @@ form {
 }
 input {
 	margin-bottom: 20px;
-	width: 350px;
+	width: 200px;
+}
+.val-message {
+	display: none;
+	visibility: hidden;
+	background: $color-white;
 }

@@ -4,6 +4,14 @@ footer {
 	text-align: left;
 }
 
+input {
+	color: $black-color;
+}
+
+text {
+	font-weight: bold;
+}
+
 .login-wrapper, h1, subtitle, footer > a{
 	text-align: center;
 	font-family: 'Roboto Condensed', sans-serif;
