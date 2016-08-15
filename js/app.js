@@ -1,8 +1,16 @@
 $(document).foundation();
 $(document).ready(function() {
 
+    function showWarningMessage () {
+        $('#val-message-container').fadeIn("slow");
+        $('#val-message-container').removeClass('hidden-message');
+        $('#val-message-container').delay(10000).fadeOut();
+    };
+
     function sentAjax(passw) {
         if (passw.length > 0) {
+            var errorMessage;
+            $('#val-message-container').addClass('hidden-message');
             $.ajax({
                 type: "post",
                 data: {
@@ -11,16 +19,21 @@ $(document).ready(function() {
                 },
                 url: "https://efigence-camp.herokuapp.com/api/login",
                 error: function(response) {
-                    console.log(response.responseText);
+                    var obj = JSON.parse(response.responseText);
+                    $('.warning-message').text(obj.message);
+                    showWarningMessage('#val-message-container');
                 },
                 success: function(response) {
-                    console.log(response);
+                    window.location.replace("http://google.com");
+
                 }
             });
         } else {
-            $('.val-message').show();
+            showWarningMessage();
+            $('.warning-message').text('Podaj hasło!');
         }
     };
+
     $('.go-btn').on('click', function(event) {
         event.preventDefault();
         var passw = $('#password').val();

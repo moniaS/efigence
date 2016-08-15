@@ -42,3 +42,44 @@ a {
 	margin-bottom: 10px;
 }
 
+.warning-message {
+	background-color: #FF0000;
+	animation-duration: 1s;
+  	animation-name: bounceIn;
+	-webkit-animation-name: bounceIn;
+	-webkit-animation-duration: 1s;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes slidein {
+	from {
+    	margin-left: 100%;
+    	width: 300%; 
+  	}
+
+  	to {
+    	margin-left: 0%;
+    	width: 100%;
+  	}
+}
