@@ -4,7 +4,7 @@ $(document).ready(function() {
     function showWarningMessage () {
         $('#val-message-container').fadeIn("slow");
         $('#val-message-container').removeClass('hidden-message');
-        $('#val-message-container').delay(10000).fadeOut();
+        $('#val-message-container').delay(5000).fadeOut();
     };
 
     function sentAjax(passw) {
