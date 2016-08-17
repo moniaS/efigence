@@ -11,3 +11,13 @@ input {
 	visibility: hidden;
 	aria-hidden: true;
 }
+.menu {
+	display: block;
+	list-style: none;
+}
+.menu-item {
+	padding-bottom: 20px;
+}
+.menu-item:hover {
+	background-color: $black-color;
+}

@@ -1,0 +1,48 @@
+.dashboard-header {
+	font-family: 'Roboto Condensed', sans-serif;
+	background-color: $apla-color;
+	.person-icon {
+		width: 70px;
+		float: left;
+	}
+	.logo {
+		width: 50px;
+		float: left;
+	}
+	.settings-icon {
+		width: 30px;
+		margin-left: 10px;
+		margin-top: 20px;
+	}
+	.messages-icon {
+		width: 30px;
+		margin-left: 50px;
+		margin-top: 20px;
+	}
+	.logout-panel {
+		float: right;
+	}
+	.search-input {
+		width: 180px;
+		margin-top: 20px;
+	}
+	.panel {
+		display: inline;
+	}
+	.logout-icon {
+		width: 30px;
+	}
+
+	.logout-panel {
+		padding-top: 30px;
+	}
+	.user-panel {
+		padding-left: 100px;
+	}
+	#username {
+		font-color: $white-color;
+	}
+}
+
+
+
