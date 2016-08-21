@@ -1,46 +1,93 @@
 .dashboard-header {
 	font-family: 'Roboto Condensed', sans-serif;
 	background-color: $apla-color;
+	padding-right: 50px;
+	padding-left: 50px;
+	.dashboard-wrapper {
+		width: 960px;
+		 margin: 0 auto; 
+	}
 	.person-icon {
-		width: 70px;
+		width: 80px;
+		height: 80px;
 		float: left;
+		border-radius: 5px;
+		padding: 0px;
+		margin: 0px;
+	}
+	.avatar-img {
+		border-radius: 0.5em;
+		margin-left: -3px;
 	}
 	.logo {
-		width: 50px;
 		float: left;
+		width: 80px;
+		height: 80px;
+		padding: 15px 15px 20px 5px;
+		border: 1px solid #5AD1E0;
+		border-radius: 5px;
+	}
+	.logo-icon {
+		border-radius: 10px;
 	}
 	.settings-icon {
-		width: 30px;
-		margin-left: 10px;
-		margin-top: 20px;
+		width: 20px;
+		margin-left: 0px;
+		margin-top: 10px;
 	}
 	.messages-icon {
-		width: 30px;
-		margin-left: 50px;
-		margin-top: 20px;
+		width: 20px;
+		margin-left: 15px;
+		margin-top: 10px;
 	}
 	.logout-panel {
 		float: right;
+		margin-top: 10px;
+		.search-icon {
+			width: 20px;
+
+
+		}
+		.search-icon-link {
+			padding-top: 15px;
+			padding-bottom: 20px;
+			border-right: 1px solid #5AD1E0;
+		}
+		.logout-icon {
+			width: 20px;
+		}
+
+		#search-input {
+			display: none;
+			background-image: url("../images/search-icon-small.png");
+    		background-position: 145px 10px;
+    		background-repeat: no-repeat;
+			width: 175px;
+		}
+		
+		.expanded {
+			display: block;
+		}
+		a {
+			padding-right:5px;
+		}
 	}
-	.search-input {
-		width: 180px;
-		margin-top: 20px;
-	}
+
 	.panel {
 		display: inline;
 	}
-	.logout-icon {
-		width: 30px;
-	}
+	
 
 	.logout-panel {
 		padding-top: 30px;
 	}
 	.user-panel {
-		padding-left: 100px;
+		margin-left: 100px;
+		margin-bottom: 20px;
 	}
-	#username {
-		font-color: $white-color;
+
+	a {
+		color: $white;
 	}
 }
 

@@ -5,7 +5,7 @@ button {
 	border-radius: 0.2em;
 }
 .clear-button {
-	background: url("..\\scss\\images\\clear.png") no-repeat;
+	background: url("../images/clear.png") no-repeat;
 	background-color: $clear-btn-color;
 	background-position: center;
 	border: none;
@@ -37,7 +37,7 @@ button {
 	font-size: 13px;
 }
 .keyboard-btn {
-	background: url("..\\scss\\images\\keyboard.png") no-repeat;
+	background: url("../images/keyboard.png") no-repeat;
 	background-position: center;
 	padding: 0px;
 	margin: 5px;

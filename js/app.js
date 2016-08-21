@@ -46,4 +46,21 @@ $(document).ready(function() {
         var url = $('.customer-image').attr('src');
         alert(url);
     });
+
+    $('.search-icon').on('click', function(event) {
+
+        event.preventDefault();
+        $('.search-icon-link').hide();
+        $('#search-input').fadeIn('slow');
+        return false;
+    });
+    $('#search-input').on('click', function(event) {
+        event.stopPropagation();
+    })
+
+    $(document).click(function(){  
+        $('#search-input').hide() //hide the button
+        $('.search-icon-link').show();
+    });
+    
 });
