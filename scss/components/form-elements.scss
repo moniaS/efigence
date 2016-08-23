@@ -11,44 +11,13 @@ input {
 	visibility: hidden;
 	aria-hidden: true;
 }
-.menu {
-	display: block;
-	list-style: none;
-}
-.menu-item {
-	padding-top: 15px;
-	padding-bottom: 10px;
-	width: 40px;
-}
-.menu-item-text {
-	font-size: 13px;
-}
-.menu-item-icon {
-	width: 35px;
-    top: 0; bottom:0; left: 0; right:0;
-    margin: auto;
-    margin-right: 0px;
-    padding-bottom: 0px;
-    padding-top: 3px;
-    margin-bottom: 0px;
-}
-.menu-item > span {
-	font-size: 5px;
-}
-.home-icon {
-	width: 20%;
-}
-.menu-item > a > img{
-	padding-bottom: 10px;
-}
-.menu-item:hover {
-	background-color: $black-color;
-}
-.menu-item-text {
-	margin-top: 0px;
-	padding-bottom: 30px;
-	padding-top: 23px;
-}
-.left-panel {
-	margin-top: 25px;
+.header {
+	#search-input {
+		display: none;
+		width: 170px;
+		margin-top: 3px;
+		padding-right: 25px;
+		border-radius: 5px;
+		float: left;
+	}
 }

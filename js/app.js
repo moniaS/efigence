@@ -52,15 +52,14 @@ $(document).ready(function() {
         event.preventDefault();
         $('.search-icon-link').hide();
         $('#search-input').fadeIn('slow');
+        $('#search-icon-small-link').fadeIn('slow');
+        $('.search-icon-small').fadeIn('slow');
         return false;
     });
-    $('#search-input').on('click', function(event) {
-        event.stopPropagation();
-    })
 
-    $(document).click(function(){  
+/*document).click(function(){  
         $('#search-input').hide() //hide the button
         $('.search-icon-link').show();
-    });
+    });*/
     
 });

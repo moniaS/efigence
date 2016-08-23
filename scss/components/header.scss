@@ -1,0 +1,121 @@
+.header {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: $apla-color;
+    padding-right: 50px;
+    padding-left: 50px;
+    .header-wrapper {
+        width: 960px;
+        margin: 0 auto;
+    }
+    .left-panel {
+        margin-bottom: 20px;
+        .person-icon {
+            width: 80px;
+            height: 80px;
+            float: left;
+            border-radius: 5px;
+            padding: 0px;
+            margin: 0px;
+            span {
+                display: none;
+            }
+        }
+        .person-icon:hover {
+            span {
+                font-size: 14px;
+                display: block;
+                margin-top: 10px;
+                margin-left: -16px;
+                padding: 5px;
+                position: absolute;
+                color: #000000;
+                background: #ebf4fb;
+                border: 0.1em solid #b7ddf2;
+                border-radius: 0.5em;
+                max-width: 10em;
+            }
+        }
+        .avatar-img {
+            border-radius: 0.5em;
+            margin-left: -3px;
+        }
+        .logo {
+            float: left;
+            width: 80px;
+            height: 80px;
+            padding: 15px 15px 20px 5px;
+            border: 1px solid #5AD1E0;
+            border-radius: 5px;
+        }
+        .logo-icon {
+            border-radius: 10px;
+        }
+        .settings-icon {
+            width: 20px;
+            margin-left: 0px;
+            margin-top: 10px;
+        }
+        .settings-icon:hover {
+            animation-name: rotate;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        .messages-icon {
+            width: 20px;
+            margin-left: 15px;
+            margin-top: 10px;
+        }
+    }
+    .right-panel {
+        float: right;
+        padding-top: 40px;
+        .search-icon {
+            width: 20px;
+            display: inline;
+            margin-right: 8px;
+        }
+        .search-icon-small-link {
+            padding-right: 0px;
+            margin-right: 0px;
+        }
+        .search-icon-small {
+            margin-left: -31px;
+            display: none;
+            padding-right: 4px;
+            padding-top: 10px;
+            padding-bottom: 9px;
+            padding-left: 3px;
+        }
+        .search-icon-link {
+            padding-top: 15px;
+            padding-bottom: 25px;
+            border-right: 1px solid #5AD1E0;
+        }
+        .search-icon-small:hover {
+            background-color: #5AD1E0;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        .logout-icon {
+            width: 20px;
+            padding-left: 3px;
+            padding-bottom: 15px;
+            padding-top: 4px;
+            margin-top: 10px;
+            display: inline;
+        }
+    }
+    
+    a {
+        color: $white-color;
+    }
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
