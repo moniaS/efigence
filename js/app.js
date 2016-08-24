@@ -30,7 +30,8 @@ $(document).ready(function() {
                 showWarningMessage('#val-message-container');
             },
             success: function(response) {
-                window.location.replace("http://google.com");
+                console.log(response);
+                window.location.replace("dashboard.html");
 
             }
         });
@@ -56,10 +57,54 @@ $(document).ready(function() {
         $('.search-icon-small').fadeIn('slow');
         return false;
     });
+    $('.search-icon-small').on('click', function(event) {
+        event.preventDefault
+        $('#search-input').hide();
+        $('#search-icon-small-link').hide();
+        $('.search-icon-small').hide();        
+        $('.search-icon-link').show();
+
+    });
 
 /*document).click(function(){  
         $('#search-input').hide() //hide the button
         $('.search-icon-link').show();
     });*/
+    function ajaxPost(data, endpoint, method, success) {
+        $.ajax({
+            method: method,
+            url: "https://efigence-camp.herokuapp.com/api/",
+            data: data
+        })
+        .done(function(msg) {
+            success(msg);
+        });
+    }
     
+    // ajaxPost({
+    //     login: "efi",
+    //     password: "camp"
+    // }, "data/summary", "POST", function(response){
+    //     //console.log(response);
+    // });
+
+
+    function ajaxGet(data, endpoint, method, success) {
+        $.ajax({
+            method: method,
+            url: "https://efigence-camp.herokuapp.com/api/" + endpoint,
+            data: data
+        })
+        .done(function(msg) {
+            console.log(msg);
+            success(msg);
+        });
+    }
+
+    ajaxGet({}, "data/summary", "GET", function(resp) {
+        console.log(resp.content[0].balance);
+        $("#balance-value").text(resp.content[0].balance);
+        $("#funds-value").text(resp.content[0].funds);
+        $("#payments-value").text(resp.content[0].payments);
+    });
 });
