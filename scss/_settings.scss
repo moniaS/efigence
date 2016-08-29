@@ -60,6 +60,7 @@ $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #fefefe;
+$green: #03C03C;
 $body-background: $white;
 $body-font-color: $black;
 $body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
@@ -68,7 +69,7 @@ $global-margin: 1rem;
 $global-padding: 1rem;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
-$global-radius: 0;
+$global-radius: 1rem;
 $global-text-direction: ltr;
 $global-flexbox: false;
 $print-transparent-backgrounds: true;
@@ -476,17 +477,18 @@ $slider-radius: $global-radius;
 // 30. Switch
 // ----------
 
-$switch-background: $medium-gray;
-$switch-background-active: $primary-color;
+$switch-background: $white;
+$switch-background-active: $white;
 $switch-height: 2rem;
+$switch-width: 2rem;
 $switch-height-tiny: 1.5rem;
 $switch-height-small: 1.75rem;
 $switch-height-large: 2.5rem;
-$switch-radius: $global-radius;
+$switch-radius: 0.25rem;
 $switch-margin: $global-margin;
-$switch-paddle-background: $white;
+$switch-paddle-background: $green;
 $switch-paddle-offset: 0.25rem;
-$switch-paddle-radius: $global-radius;
+$switch-paddle-radius: 0.25rem;
 $switch-paddle-transition: all 0.25s ease-out;
 
 // 31. Table

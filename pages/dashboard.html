@@ -71,8 +71,8 @@
   				<div class="small-3 column">
             <div class="right-panel">
                <input id="search-input" type="text" placeholder="Search...">
-               <a href="" class="search-icon-small-link" >
-                <img class="search-icon-small" src="../images/search-icon-small.png">
+               <a href="" class="search-icon-input-link" >
+                <img class="search-icon-input" src="../images/search-icon-small.png">
                 </a>
                <a href="" class="search-icon-link" >
                 <img class="search-icon icon" src="../images/search-icon.png">
@@ -92,30 +92,49 @@
         <div class="small-6 column">
           <h1>Finance life stream</h1>
         </div>
-      </div>
-      <div class="row">
-        <div class="small-3 column">
-          <p >Balance</p>
-        </div>
-        <div class="small-3 column">
-          <p >Available funds</p>
-        </div>
-        <div class="small-3 column end">
-          <p >Scheduled payments</p>
+        <div class="small-4 column">
+          <div class="dashboard-adding-panel">
+            <p class="add-item-text">Add</p>
+            <button class="dashboard-panel-button">BANK</button>         
+            <button class="dashboard-panel-button">PAYMENT</button>
+          </div>
         </div>
       </div>
       <div class="row">
         <div class="small-3 column">
-          <b id="balance-value"></b>
+          <span class="dashboard-panel-subtitle">Balance</span>
         </div>
         <div class="small-3 column">
-          <b id="funds-value"></b>
+          <span class="dashboard-panel-subtitle">Available funds</span>
         </div>
         <div class="small-3 column end">
-          <b id="payments-value"></b>
+          <span class="dashboard-panel-subtitle">Scheduled payments</span>
         </div>
-      </div>
 
+      </div>
+      <div class="row">
+        <div class="small-3 column">
+          <b class="money-value" id="balance-value"></b>
+        </div>
+        <div class="small-3 column">
+          <b class="money-value" id="funds-value"></b>
+        </div>
+        <div class="small-3 column">
+          <b class="money-value" id="payments-value"></b>
+        </div>
+        <div class="small-3 column">
+          <div class="accounts-analysis-wrapper">
+              <span class="account-analysis-text">Accounts analysis</span>
+              <div class="switch">
+                <input type="radio" class="switch-input" name="view" value="week" id="off" checked>
+                <label for="off" class="switch-label switch-label-off">OFF</label>
+                <input type="radio" class="switch-input" name="view" value="month" id="on">
+                <label for="on" class="switch-label switch-label-on">ON</label>
+                <span class="switch-selection"></span> 
+              </div>
+          </div>
+        </div>
+      </div>
     </div>
 	</main>
     <script src="../bower_components/jquery/dist/jquery.js"></script>
