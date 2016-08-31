@@ -1,11 +1,12 @@
 $(document).foundation();
 $(document).ready(function() {
 
+    //----------------functions to send ajax----------------------------
     function ajaxMethodPost(data, endpoint, method, onSuccess, onError) {
         $.ajax({
-            method: method,
-            url: "https://efigence-camp.herokuapp.com/api/" + endpoint,
-            data: data,
+            method,
+            url: getAjaxAddress(endpoint),
+            data,
             success: function(response) {
                 onSuccess(response);            
             },
@@ -13,6 +14,10 @@ $(document).ready(function() {
                 onError(response);
             },
         })
+    }
+
+    function getAjaxAddress(endpoint) {
+        return  "https://efigence-camp.herokuapp.com/api/" + endpoint;
     }
 
     function ajaxMethodGet(data, endpoint, method, onSuccess, onError) {
@@ -28,10 +33,6 @@ $(document).ready(function() {
             },
         })
     }
-
-    function showWarningMessage () {
-        $('#val-message-container').fadeIn("slow").removeClass('hidden-message').delay(5000).fadeOut();
-    };
 
     function sendAjaxToLogin(login, passw) {
 
@@ -56,10 +57,12 @@ $(document).ready(function() {
     function sendAjaxToGetSummaryData() {
         ajaxMethodGet({}, "data/summary", "GET", 
             function(resp) {
-                var currency = " PLN";
-                $("#balance-value").text(replaceNumberWithSpaces(resp.content[0].balance) + currency);
-                $("#funds-value").text(replaceNumberWithSpaces(resp.content[0].funds) + currency);
-                $("#payments-value").text(replaceNumberWithSpaces(resp.content[0].payments) + currency);
+                var currency = ",00 PLN";
+
+                $("#balance-value").text(formatMoneyValue(resp.content[0].balance) + currency);
+                console.log(resp.content[0].balance);
+                $("#funds-value").text(formatMoneyValue(resp.content[0].funds) + currency);
+                $("#payments-value").text(formatMoneyValue(resp.content[0].payments) + currency);
             },
             function(resp) {
             }
@@ -68,16 +71,33 @@ $(document).ready(function() {
 
     sendAjaxToGetSummaryData();
 
+    ajaxMethodGet({}, "data/history", "GET", 
+        function(resp) {
+            console.log('sialal');
+            console.log(resp.content.length);
+            for(var i = 0; i<resp.content.length; i++) {
+                $("#list").append('<li class="row collapse"><div class="small-2 column">' + resp.content[i].date + '</div><div class="small-8 column">' + resp.content[i].description + '</div><div class="small-2 column">' +  resp.content[i].amount + " " +  resp.content[i].currency + '</div></li>');
+            }
+        },
+        function(resp) {
 
-    function replaceNumberWithSpaces(yourNumber) {
+        })
+
+
+    //-----------------other functions---------------------------
+
+     function showWarningMessage () {
+        $('#val-message-container').fadeIn("slow").removeClass('hidden-message').delay(5000).fadeOut();
+    };
+
+    function formatMoneyValue(yourNumber) {
         var number = yourNumber.toString().split(".");
         number[0] = number[0].replace(/\B(?=(\d{3})+(?!\d))/g, " ");
         return number.join(".");
     }
 
-    console.log(replaceNumberWithSpaces(26736020.23));
-
-      $('.go-btn').on('submit', function(event) {
+    //-------------on clicks--------------------------------------
+    $('.go-btn').on('submit', function(event) {
         event.preventDefault();
         var passw = $('#password').val();
         sendAjaxToLogin('', passw);
