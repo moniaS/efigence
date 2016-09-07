@@ -73,10 +73,12 @@ $(document).ready(function() {
 
     ajaxMethodGet({}, "data/history", "GET", 
         function(resp) {
-            console.log('sialal');
-            console.log(resp.content.length);
+            var rowTemplate = (data) => {
+                return `<li class="row collapse"><div class="small-2 column">${(new Date(data.date)).toISOString().slice(0,10)}</div><div class="small-8 column">${data.description}</div><div class="small-2 column">${data.amount}</div></li>`
+            }
             for(var i = 0; i<resp.content.length; i++) {
-                $("#list").append('<li class="row collapse"><div class="small-2 column">' + resp.content[i].date + '</div><div class="small-8 column">' + resp.content[i].description + '</div><div class="small-2 column">' +  resp.content[i].amount + " " +  resp.content[i].currency + '</div></li>');
+                $("#list").append(rowTemplate({date: resp.content[i].date, description: resp.content[i].description, amount: resp.content[i].amount}));
+                //$("#list").append('<li class="row collapse"><div class="small-2 column">' + resp.content[i].date + '</div><div class="small-8 column">' + resp.content[i].description + '</div><div class="small-2 column">' +  resp.content[i].amount + " " +  resp.content[i].currency + '</div></li>');
             }
         },
         function(resp) {
