@@ -1,22 +1,24 @@
 <!doctype html>
 <html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="../css/app.css">
-  </head>
-  <body>
-  	<header>
-  		<div class="header">
-  			<div class="row">
-          <div class="header-wrapper">
-  				<div class="small-5 column">
-            <div class="left-panel">
-  				  <div class="logo">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="../css/app.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
+
+</head>
+<body>
+<header>
+  <div class="header">
+    <div class="row">
+      <div class="header-wrapper">
+        <div class="small-12 medium-5 column">
+          <div class="left-panel">
+            <div class="logo">
               <a href="">
-                <img src="../images/efi3_login1.png"> 
+                <img src="../images/efi3_login1.png">
               </a>
             </div>
             <div class="person-icon">
@@ -27,133 +29,168 @@
             </div>
             <div class="left-panel">
               <label class="username">Jan Kowalski</label>
-                  <a href="">
-                    <img class="messages-icon" src="../images/pseudo-icon.png">
-                  </a>
-                  <a href="">
-                    <img class="settings-icon" src="../images/settings-icon.png">
-                  </a>
-            </div>
-  				</div>
-          </div>
-  	
-  				<div class="small-3 column">
-            <nav>
-              <ul class="menu">
-                <li class="menu-item">
-                  <a href="">
-                    <img class="menu-item-icon" src="../images/home-icon.png">
-                    <span class="menu-item-text">HOME</span>
-                  </a>       
-                </li>
-                <li class="menu-item">
-                  <a href="">
-                    <img class="menu-item-icon" src="../images/analyse-icon.png">
-                    <span class="menu-item-text">ANALYSE</span>
-                  </a>       
-                </li>
-                <li class="menu-item">
-                  <a href="">
-                    <img class="menu-item-icon" src="../images/settings-icon.png">
-                    <span class="menu-item-text">PLAN</span>
-                  </a>       
-                </li>
-                <li class="menu-item">
-                  <a href="">
-                    <img class="menu-item-icon" src="../images/settings-icon.png">
-                    <span class="menu-item-text">EARN</span>
-                  </a>       
-                </li>
-              </ul>
-            </nav>
-  				</div>
-
-  				<div class="small-3 column">
-            <div class="right-panel">
-               <input id="search-input" type="text" placeholder="Search...">
-               <a href="" class="search-icon-input-link" >
-                <img class="search-icon-input" src="../images/search-icon-small.png">
-                </a>
-               <a href="" class="search-icon-link" >
-                <img class="search-icon icon" src="../images/search-icon.png">
+              <a href="">
+                <img class="messages-icon" src="../images/pseudo-icon.png">
               </a>
-              <a href="login.html" class="logout-icon-link">
-                <img class="logout-icon icon" src="../images/logout-icon.png">
-              </a>  
+              <a href="">
+                <img class="settings-icon" src="../images/settings-icon.png">
+              </a>
             </div>
-  				</div>
-        </div>
-  			</div>
-  		</div>
-  	</header>
-	<main>
-    <div class="dashboard-panel">
-      <div class="row">
-        <div class="small-6 column">
-          <h1>Finance life stream</h1>
-        </div>
-        <div class="small-4 column">
-          <div class="dashboard-adding-panel">
-            <p class="add-item-text">Add</p>
-            <button class="dashboard-panel-button">BANK</button>         
-            <button class="dashboard-panel-button">PAYMENT</button>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="small-3 column">
-          <span class="dashboard-panel-subtitle">Balance</span>
-        </div>
-        <div class="small-3 column">
-          <span class="dashboard-panel-subtitle">Available funds</span>
-        </div>
-        <div class="small-3 column end">
-          <span class="dashboard-panel-subtitle">Scheduled payments</span>
+        <div class="small-9 medium-3 column">
+          <nav>
+            <ul class="menu">
+              <li class="menu-item">
+                <a href="">
+                  <img class="menu-item-icon" src="../images/home-icon.png">
+                  <span class="menu-item-text">HOME</span>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="">
+                  <img class="menu-item-icon" src="../images/analyse-icon.png">
+                  <span class="menu-item-text">ANALYSE</span>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="">
+                  <img class="menu-item-icon" src="../images/settings-icon.png">
+                  <span class="menu-item-text">PLAN</span>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="">
+                  <img class="menu-item-icon" src="../images/earn.png">
+                  <span class="menu-item-text">EARN</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
 
-      </div>
-      <div class="row">
         <div class="small-3 column">
-          <b class="money-value" id="balance-value"></b>
-        </div>
-        <div class="small-3 column">
-          <b class="money-value" id="funds-value"></b>
-        </div>
-        <div class="small-3 column">
-          <b class="money-value" id="payments-value"></b>
-        </div>
-        <div class="small-3 column">
-          <div class="accounts-analysis-wrapper">
-              <label class="account-analysis-text" >Accounts analysis</label>
-              <div class="switch">
-                <input type="radio" class="switch-input" name="view" value="week" id="off">
-                <label for="off" class="switch-label switch-label-off">OFF</label>
-                <input type="radio" class="switch-input" name="view" value="month" id="on" checked>
-                <label for="on" class="switch-label switch-label-on">ON</label>
-                <span class="switch-selection"></span> 
-              </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="small-6 column">
-        </div>
-        <div class="small-6 column">
-          <div class="history-wrapper">
-            <h3>History</h3>
-            <div class="list-component">
-              <ul id="list">
-              
-              </ul>
-            </div>
+          <div class="right-panel">
+            <input id="search-input" type="text" placeholder="Search...">
+            <a href="" class="search-icon-input-link" >
+              <img class="search-icon-input" src="../images/search-icon-small.png">
+            </a>
+            <a href="" class="search-icon-link" >
+              <img class="search-icon icon" src="../images/search-icon.png">
+            </a>
+            <a href="login.html" class="logout-icon-link">
+              <img class="logout-icon icon" src="../images/logout-icon.png">
+            </a>
           </div>
         </div>
       </div>
     </div>
-	</main>
-    <script src="../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../bower_components/what-input/what-input.js"></script>
-    <script src="../bower_components/foundation-sites/dist/foundation.js"></script>
-    <script src="../js/app.js"></script>
-  </body>
+  </div>
+</header>
+<main>
+  <div class="dashboard-panel">
+    <div class="row">
+      <div class="small-6 column">
+        <h1>Finance life stream</h1>
+      </div>
+      <div class="small-4 column">
+        <div class="dashboard-adding-panel">
+          <p class="add-item-text">Add</p>
+          <button class="dashboard-panel-button">BANK</button>
+          <button class="dashboard-panel-button">PAYMENT</button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-3 column">
+        <span class="dashboard-panel-subtitle">Balance</span>
+      </div>
+      <div class="small-3 column">
+        <span class="dashboard-panel-subtitle">Available funds</span>
+      </div>
+      <div class="small-3 column end">
+        <span class="dashboard-panel-subtitle">Scheduled payments</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-3 column">
+        <b class="money-value" id="balance-value"></b>
+      </div>
+      <div class="small-3 column">
+        <b class="money-value" id="funds-value"></b>
+      </div>
+      <div class="small-3 column">
+        <b class="money-value" id="payments-value"></b>
+      </div>
+      <div class="small-3 column">
+        <div class="accounts-analysis-wrapper">
+          <label class="account-analysis-text" >Accounts analysis</label>
+          <div class="switch">
+            <input type="radio" class="switch-input" name="view" value="week" id="off">
+            <label for="off" class="switch-label switch-label-off">OFF</label>
+            <input type="radio" class="switch-input" name="view" value="month" id="on" checked>
+            <label for="on" class="switch-label switch-label-on">ON</label>
+            <span class="switch-selection"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 column">
+        <canvas id="balanceHistory"></canvas>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 medium-6 column">
+        <div class="cards-wrapper">
+          <h3>Products</h3>
+          <div class="card-item">
+            <div class="card-section">
+              <img src="../images/wallet.png">
+              Wallets
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="card-section">
+              <img src="../images/deposit.png">
+              Deposits
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="card-section">
+              <img src="../images/account.png">
+              Accounts
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="card-section">
+              <img src="../images/fund.png">
+              Funds
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="card-section">
+              <img src="../images/bank_loan.png">
+              Bank loans
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="small-12 medium-6 column">
+        <div class="history-wrapper">
+          <h3>History</h3>
+          <div class="list-component">
+            <ul id="historyList">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script src="../bower_components/what-input/what-input.js"></script>
+<script src="../bower_components/foundation-sites/dist/foundation.js"></script>
+<script src="../js/app.js"></script>
+</body>
 </html>
