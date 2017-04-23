@@ -1,4 +1,3 @@
-$(document).foundation();
 $(document).ready(function() {
     //----------------functions to send ajax----------------------------
     function ajaxMethodPost(data, endpoint, method, onSuccess, onError) {
