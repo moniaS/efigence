@@ -132,10 +132,6 @@ function createChartWithIncomesAndOutcomes(datesArray, incomesArray, outcomesArr
         return number.join(".");
     }
 
-    $('.customer-image').on('click', function(event) {
-        var url = $('.customer-image').attr('src');
-        alert(url);
-    });
 
     $('.search-icon').on('click', function(event) {
 
