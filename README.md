@@ -11,7 +11,7 @@ During this project I learnt a lot of new technologies. This was the first time 
 * gulp
 ## Preview
 My application is available at https://monias.github.io/efigence/.
-First page is a login page [Login Page](https://monias.github.io/efigence/)- you do not need to enter any password - just click "OK".
+First page is a login page [Login Page](https://monias.github.io/efigence/) - you do not need to enter any password - just click "OK".
 
 Second page is a dashboard page [Dashboard Page](https://monias.github.io/efigence/dashboard.html) - this page presents data received from API - to go to third page click "EARN" in header.
 
