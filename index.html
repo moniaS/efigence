@@ -1,79 +1,81 @@
 <!doctype html>
 <html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="css/app.css">
-  </head>
-  <body>
-		<div class="login-wrapper">
-			<div class="row">
-				<div class="small-3 columns">
-					<div class="logo">
-						<a href="">
-							<img src="images/efi3_login1.png">
-						</a>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login Page</title>
+	<link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+<div class="login-wrapper">
+	<div class="row">
+		<div class="small-3 columns">
+			<div class="logo">
+				<a href="">
+					<img src="images/efi3_login1.png">
+				</a>
+			</div>
+		</div>
+		<div class="small-5 columns end small-centered">
+			<div class="login-form">
+				<header>
+					<h1>Login</h1>
+					<p class="subtitle">Aby zaimportować dane zaloguj się do swojego banku</p>
+				</header>
+				<form>
+					<div class="customer-image-wrapper">
+						<img class="customer-image" src="images/circle.png">
 					</div>
-				</div>
-				<div class="small-5 columns end small-centered">
-					<div class="login-form">
-						<header>
-							<h1>Login</h1>
-							<p class="subtitle">Aby zaimportować dane zaloguj się do swojego banku</p>
-						</header>
-						<form>
-							<div class="customer-image-wrapper">
-								<img class="customer-image" src="images/circle.png">
+					<div class="row">
+						<div class="small-4 columns small-centered">
+							<div class="customer-number">
+								<text>123456789</text>
+								<button class="clear-button"></button>
 							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="small-11 columns small-centered">
 							<div class="row">
-								<div class="small-4 columns small-centered">
-									<div class="customer-number">
-										<text>123456789</text>
-										<button class="clear-button"></button>
+								<div class="small-11 columns">
+									<div class="password-input">
+										<input type="password" id="password"></input>
 									</div>
 								</div>
-							</div>
-							<div class="row">
-								<div class="small-11 columns small-centered">
-									<div class="row">
-										<div class="small-11 columns">
-											<div class="password-input">
-												<input type="password" id="password"></input>
-											</div>
-										</div>
-										<div class="small-1 columns end">
-											<button class="keyboard-btn"></button>
-										</div>
-									</div>
-								</div>
-								
-								<div id="val-message-container" class="hidden-message">
-									<p class="warning-message">Podaj hasło!</p>
+								<div class="small-1 columns end">
+									<button class="keyboard-btn"></button>
 								</div>
 							</div>
-							<div class="row">
-								<div class="small-8 columns small-centered">
-									<div class="buttons">
-										<button class="select-other-btn">SELECT OTHER</button>
-										<button class="go-btn">GO</button>
-									</div>
-								</div>
+						</div>
+
+						<div id="val-message-container" class="hidden-message">
+							<p class="warning-message">Podaj hasło!</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="small-8 columns small-centered">
+							<div class="buttons">
+								<button class="select-other-btn">SELECT OTHER</button>
+								<button class="go-btn">GO</button>
 							</div>
-							
-					</form>
-				</div>	
+						</div>
+					</div>
+
+				</form>
+			</div>
 			<footer>
 				<a href="">SECURITY</a>
 				<a href="">LOGGIN IN</a>
 				<a href="">CONTACT</a>
 			</footer>
 		</div>
-    
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/what-input/what-input.js"></script>
-    <script src="bower_components/foundation-sites/dist/foundation.js"></script>
-    <script src="js/app.js"></script>
-  </body>
+	</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="bower_components/foundation-sites/dist/foundation.js"></script>
+<script src="js/app.js"></script>
+</body>
 </html>
