@@ -1,48 +1,16 @@
-# Foundation for Sites Template
-
-**Please open all issues with this template on the main [Foundation for Sites](https://github.com/zurb/foundation-sites/issues) repo.**
-
-This is the basic starter project for [Foundation for Sites 6](http://foundation.zurb.com/sites). It includes a Sass compiler and a starter HTML file for you.
-
-## Installation
-
-To use this template, your computer needs:
-
-- [NodeJS](https://nodejs.org/en/) (0.12 or greater)
-- [Git](https://git-scm.com/)
-
-This template can be installed with the Foundation CLI, or downloaded and set up manually.
-
-### Using the CLI
-
-Install the Foundation CLI with this command:
-
-```bash
-npm install foundation-cli --global
-```
-
-Use this command to set up a blank Foundation for Sites project with this template:
-
-```bash
-foundation new --framework sites --template basic
-```
-
-The CLI will prompt you to give your project a name. The template will be downloaded into a folder with this name.
-
-### Manual Setup
-
-To manually set up the template, first download it with Git:
-
-```bash
-git clone https://github.com/zurb/foundation-sites-template projectname
-```
-
-Then open the folder in your command line, and install the needed dependencies:
-
-```bash
-cd projectname
-npm install
-bower install
-```
-
-Finally, run `npm start` to run the Sass compiler. It will re-run every time you save a Sass file.
+# Efigence Camp Project
+Efigence Camp was a workshop for beginner programmers to learn developing web applications. 
+## Purpose of the project
+The purpose of this project was to create website based on .psd file, which communicates with the API and present received data.
+During this project I learnt a lot of new technologies. This was the first time when I had to deal with Sass preprocessors with SCSS syntax. Sass gives a lot possibilities including variables and mixins. What's more I gained knowledge about gulp tasks and generally about HTML and CSS technologies.
+## Technologies
+* HTML
+* CSS/SCSS
+* Javascript
+* jQuery
+* gulp
+## Preview
+My application is available at https://monias.github.io/efigence/.
+First page is a login page [Login Page](https://monias.github.io/efigence/)- you do not need to enter any password - just click "OK".
+Second page is a dashboard page [Dashboard Page](https://monias.github.io/efigence/dashboard.html) - this page presents data received from API - to go to third page click "EARN" in header.
+Third page is a gameplay page [Gameplay Page](https://monias.github.io/efigence/gameplay.html) - this page presents available services and badges to get. 
